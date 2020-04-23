@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Post from "./Post";
+import styles from "./App.module.css";
 
 function App() {
   const [redditData, setRedditData] = useState([]);
@@ -23,7 +24,7 @@ function App() {
   if (loading) return "Loading..";
 
   return (
-    <div className="app">
+    <div className={styles.app}>
       <h1>Reddit Viewer</h1>
       <form
         onSubmit={(e) => {
@@ -38,7 +39,7 @@ function App() {
             setSearch(e.target.value);
           }}
         />
-        <button>Refresh</button>
+        <button className={styles.refresh}>Refresh</button>
       </form>
       {redditData.map(({ data }, index) => {
         return <Post {...data} key={index}></Post>;

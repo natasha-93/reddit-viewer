@@ -1,5 +1,8 @@
 .post {
   border-bottom: 1px solid black;
+  /* border-left: 1px solid black; */
+  padding: 10px;
+  box-shadow: 10px 5px 5px #0a15bb57;
 }
 
 .details {
